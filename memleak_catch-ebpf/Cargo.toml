@@ -1,0 +1,17 @@
+[package]
+name = "memleak_catch-ebpf"
+version = "0.1.0"
+edition.workspace = true
+
+[dependencies]
+memleak_catch-common = { path = "../memleak_catch-common" }
+
+aya-ebpf = { workspace = true }
+aya-log-ebpf = { workspace = true }
+
+[build-dependencies]
+which = { workspace = true }
+
+[[bin]]
+name = "memleak_catch"
+path = "src/main.rs"
